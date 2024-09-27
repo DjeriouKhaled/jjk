@@ -100,7 +100,6 @@
           <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="#1877F2"  viewBox="7.025 7.025 497.951 497.95">
             <path d="M480,257.35c0-123.7-100.3-224-224-224s-224,100.3-224,224c0,111.8,81.9,204.47,189,221.29V322.12H164.11V257.35H221V208c0-56.13,33.45-87.16,84.61-87.16,24.51,0,50.15,4.38,50.15,4.38v55.13H327.5c-27.81,0-36.51,17.26-36.51,35v42h62.12l-9.92,64.77H291V478.66C398.1,461.85,480,369.18,480,257.35Z" fill-rule="evenodd"/>
           </svg>
-
             <span>فيسبوك</span>
           </div>
         </a>
@@ -219,10 +218,16 @@
         <svg class="w-14 h-14 mx-auto" fill="none" stroke="#0f172a" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path></svg>
       </div>
       <h2 class="text-2xl font-bold mb-8 text-slate-900">أخبرني عن مشروعك القادم</h2>
-      <div class="space-x-4">
-        <button  class="bg-slate-900 text-white px-6 py-2 rounded-full">أرسل لي بريدا إلكترونيا</button>
+      <div class="mt-4 flex justify-center items-center space-x-2">
         <a href="https://t.me/khaled_djeriou" class="bg-gray-50 text-slate-900 border border-slate-900 px-6 py-2 rounded-full">تلغرام</a>
-      </div>
+     
+        <a
+  :href="`https://mail.google.com/mail/?view=cm&fs=1&to=khaledjr2018@gmail.com&su=${encodeURIComponent('Subject')}&body=${encodeURIComponent('Your Message')}`"
+  class="bg-slate-900 text-white px-6 py-2 rounded-full"
+  target="_blank"
+  >أرسل لي بريدا إلكترونيا</a>
+
+     </div>
     </section>
 
     <!-- Footer -->
@@ -279,14 +284,9 @@ export default {
       this.copyText();
      
     },
-    sendEmail() {
-      const email = "khaledjr2018@gmail.com";
-      const subject = "Subject Here"; // Add your subject
-      const body = "Message Here"; // Add your message
-      const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      
-      window.location.href = mailtoLink;
-    },
+    
+
+   
     toggleMenu() {
       this.isMenuOpen = !this.isMenuOpen; // Toggle the menu open state
     },
